@@ -30,15 +30,9 @@ func (p *program) Start(s service.Service) error {
 func (p *program) run() {
 	// Do work here
 	log.Println("开始运行run")
-	sleepSeconds := 10 * time.Second
+	sleepTime := 10 * time.Second
 	loopCount := 0
 	for {
-		//if loopCount > 24 {
-		//	f, err := os.Create("D:/GoAutoLoginZzuliStudent.txt")
-		//	if err == nil {
-		//		_ = f.Close()
-		//	}
-		//}
 		jar, _ := cookiejar.New(nil)
 		httpClient := &http.Client{
 			CheckRedirect: PreventCheckRedirect,
@@ -51,7 +45,7 @@ func (p *program) run() {
 			if !strings.Contains(fmt.Sprintf("%v", err), "stopped redirects") {
 				log.Println("<errorMsg>无需认证，成功连接</errorMsg>")
 				loopCount++
-				time.Sleep(sleepSeconds)
+				time.Sleep(sleepTime)
 				continue
 			}
 		}
@@ -98,7 +92,7 @@ func (p *program) run() {
 		log.Printf("<loopCount>%d</loopCount>", loopCount)
 
 		loopCount++
-		time.Sleep(sleepSeconds)
+		time.Sleep(sleepTime)
 	}
 }
 func (p *program) Stop(s service.Service) error {
@@ -148,7 +142,7 @@ func main() {
 	svcConfig := &service.Config{
 		Name:        "GoAutoLoginZzuliStudent",
 		DisplayName: "GoAutoLoginZzuliStudent",
-		Description: "This is an Go service.",
+		Description: "This is an Go service. Auto login zzuli-student WIFI",
 		Arguments:   args,
 	}
 
