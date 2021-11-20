@@ -4,16 +4,16 @@
 
 ## 安装方法
 
-### 1. 从 [github release](https://github.com/allwaysLove/GoAutoLoginZzuliStudent/releases) 中下载最新版本
+### 1. 从 [Github Release](https://github.com/allwaysLove/GoAutoLoginZzuliStudent/releases) 中下载最新版本
 ### 2. 通过源码安装
    ```shell
-   go build GoAutoLoginZzuliStudent\main -o bin\GoAutoLoginZzuliStudent.exe
+   go build GoAutoLoginZzuliStudent\main -o bin\autoLoginWifi.exe
    ```
 
 ## 使用方法
 
-1. 打开终端，使用 `cd` 命令，将工作目录切换至程序所在目录，执行 `autoLoginWifi install` 命令，按提示输入 **用户名**、**密码** 与 **账户类型**，其中账户类型取值包括：*校园网*、*校园移动*、*校园联通*、*校园单宽*
-2. 服务安装完成后，执行 `autoLoginWifi start` 命令即可启动
+1. 打开终端，使用 `cd` 命令，将工作目录切换至程序所在目录，执行 `autoLoginWifi.exe install` 命令，按提示输入 **用户名**、**密码** 与 **账户类型**，其中账户类型取值包括：*校园网*、*校园移动*、*校园联通*、*校园单宽*
+2. 服务安装完成后，执行 `autoLoginWifi.exe start` 命令即可启动
 3. 其他参数详见下方表格
 
     | 参数名称      | 参数功能   |
